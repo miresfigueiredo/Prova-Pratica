@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+    <title>Editar Disciplina</title>
+</head>
+<body>
+    <h1>Editar Disciplina</h1>
+    <form method="post" action="/editar_disciplina/{{ disciplina['id'] }}">
+        <input type="text" name="disciplina" placeholder="Digite o nome da Disciplina:" value="{{ disciplina['nome'] }}" required>
+        <input type="number" name="cargahoraria" id="cargahoraria" placeholder="Digite a Carga Horária:" value="{{ disciplina['cargahoraria'] }}" required>
+        <input type="text" name="conteudo" id="conteudo" placeholder="Digite o conteúdo da disciplina:"  value="{{ disciplina['conteudo'] }}" required>
+        <input type="submit" value="Salvar">
+    </form>
+
+{% endblock %}

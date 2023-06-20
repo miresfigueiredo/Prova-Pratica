@@ -1,0 +1,28 @@
+
+{% extends 'base.html' %}
+{% block conteudo %}
+
+    <title>Lista de Disciplinas</title>
+
+    <h1>Lista de Disciplinas</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Carga Horária</th>
+            <th>Conteúdos</th>
+        </tr>
+        {% for disciplina in disciplinas %}
+        <tr>
+            <td>{{ disciplina['id'] }}</td>
+            <td>{{ disciplina['nome'] }}</td>
+            <td>{{ disciplina['cargahoraria'] }}</td>
+            <td>{{ disciplina['conteudo'] }}</td>
+            <td><a href="/editar_disciplina/{{ disciplina['id'] }}">Editar</a></td>
+            <td><a href="/excluir_disciplina/{{ disciplina['id'] }}">Excluir</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br><a href="/cadastrar_disciplina">Cadastrar Disciplinas</a>
+
+{% endblock %}

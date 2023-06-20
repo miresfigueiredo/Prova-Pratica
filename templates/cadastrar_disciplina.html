@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+    <title>Cadastrar Disciplina</title>
+    
+    <h1>Cadastrar Disciplina</h1>
+    <form method="post" action="/cadastrar_disciplina">
+        <input type="text" name="disciplina" placeholder="Digite o nome da Disciplina:" required>
+        <input type="number" name="cargahoraria" id="cargahoraria" placeholder="Digite a Carga Horária:" required>
+        <input type="text" name="conteudo" id="conteudo" placeholder="Digite o conteúdo da disciplina:" required>
+        <input type="submit" value="Adicionar">
+    </form>
+
+{% endblock %}
